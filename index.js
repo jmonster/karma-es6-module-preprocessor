@@ -18,6 +18,8 @@ var createModuleTranspilerPreprocessor = function(args, config, logger, helper) 
   var log = logger.create('preprocessor.es6-module-transpiler');
   var defaultOptions = {
     modules: 'amd',
+    basePath: null,
+    importPaths: [process.cwd],
     compatFix: true
   };
 
@@ -28,8 +30,17 @@ var createModuleTranspilerPreprocessor = function(args, config, logger, helper) 
 
     var moduleName = file.originalPath.split(path.join(process.cwd(), '/'))[1];
 
+    //remove basePath from module name
+    if(options.basePath) {
+      var dir = options.basePath.concat('/');
+      var normalizedModuleName = moduleName.split(dir)[1];
+      if(normalizedModuleName) {
+        moduleName = normalizedModuleName;
+      }
+    }
+
     var container = new Container({
-      resolvers: [new FileResolver([process.cwd()])],
+      resolvers: [new FileResolver(options.importPaths)],
       formatter: new AMDFormatter()
     });
 
