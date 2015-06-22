@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/Attamusc/karma-es6-module-preprocessor",
   "dependencies": {
-    "es6-module-transpiler": "^0.6.0",
-    "es6-module-transpiler-amd-formatter": "git://github.com/caridy/es6-module-transpiler-amd-formatter",
-    "recast": "^0.6.0"
+    "es6-module-transpiler": "jmonster/es6-module-transpiler#27ef176aea225a914e2d5a5979320b5844ddd6b0",
+    "es6-module-transpiler-amd-formatter": "caridy/es6-module-transpiler-amd-formatter",
+    "recast": "jmonster/recast#ca0aaf926bb3798fc7b3b183d771324140855c4c"
   },
   "peerDependencies": {
     "karma": ">=0.12.0"
