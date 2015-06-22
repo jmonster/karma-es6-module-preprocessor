@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Attamusc/karma-es6-module-preprocessor",
   "dependencies": {
-    "es6-module-transpiler": "^0.6.0",
+    "es6-module-transpiler": "^0.10.0",
     "es6-module-transpiler-amd-formatter": "caridy/es6-module-transpiler-amd-formatter",
     "recast": "^0.10.12"
   },
