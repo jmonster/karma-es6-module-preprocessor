@@ -24,7 +24,7 @@
   "dependencies": {
     "es6-module-transpiler": "^0.6.0",
     "es6-module-transpiler-amd-formatter": "git://github.com/caridy/es6-module-transpiler-amd-formatter",
-    "recast": "^0.6.0"
+    "recast": "^0.10.12"
   },
   "peerDependencies": {
     "karma": ">=0.12.0"
